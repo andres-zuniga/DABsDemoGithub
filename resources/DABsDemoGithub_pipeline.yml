@@ -1,0 +1,12 @@
+# The main pipeline for DABsDemoGithub
+resources:
+  pipelines:
+    DABsDemoGithub_pipeline:
+      name: DABsDemoGithub_pipeline
+      target: DABsDemoGithub_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src

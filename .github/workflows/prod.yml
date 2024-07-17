@@ -1,0 +1,41 @@
+name: Main branch PR
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  # For CLI authentication
+  DATABRICKS_HOST: ${{secrets.DATABRICKS_HOST}}
+  DATABRICKS_TOKEN: ${{secrets.DATABRICKS_TOKEN}}
+
+jobs:
+
+  deploy:
+    name: Deploy bundle
+    runs-on: ubuntu-latest
+
+    # Checkout code, setup databricks CLI and then, deploy the bundle using DABs
+    steps:
+      - uses: actions/checkout@v3
+      - uses: databricks/setup-cli@main
+
+      - name: Destroy past bundle files
+        continue-on-error: true
+        run: databricks bundle destroy --target prod --auto-approve --force-lock 
+
+      - run: databricks bundle deploy --target prod
+
+  pipeline_update:
+    name: Run pipeline update
+    runs-on: ubuntu-latest
+
+    # Run the "deploy" job before.
+    needs:
+      - deploy
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: databricks/setup-cli@main
+      - run: databricks bundle run test_pipeline --refresh-all --target prod
+      # in here, we can run all the resources we defined on the databricks.yml
