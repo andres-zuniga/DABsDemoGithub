@@ -37,5 +37,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
-      - run: databricks bundle run test_pipeline --refresh-all --target prod
+      - run: databricks bundle run DABsDemoGithub_pipeline --refresh-all --target prod
       # in here, we can run all the resources we defined on the databricks.yml
