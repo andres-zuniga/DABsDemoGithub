@@ -28,7 +28,7 @@ targets:
   #   workspace:
   #     host: https://adb-1509896260248252.12.azuredatabricks.net/
 
-  # The 'prod' target, used for production deployment. 
+  # The 'prod' target, used for production deployment.  
   prod:
     # We use 'mode: production' to indicate this is a production deployment.  
     # Doing so enables strict verification of the settings below. 
