@@ -3,6 +3,9 @@
 bundle:
   name: DABsDemoGithub
 
+variables:
+  variable1: sjldjlasjdas
+
 include:
   - resources/*/*.yml
 
@@ -30,6 +33,10 @@ targets:
     # We use 'mode: production' to indicate this is a production deployment. 
     # Doing so enables strict verification of the settings below. 
     mode: production
+    resources:
+      jobs:
+        job:
+          notebook_path: 
     workspace:
       host: https://adb-1509896260248252.12.azuredatabricks.net/
       # We always use /Users/andres.zuniga@databricks.com for all resources to make sure we only have a single copy.
