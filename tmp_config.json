@@ -1,0 +1,1 @@
+{"catalog": "hive_metastore", "cloud": "azure", "google_service_account": "", "latest_lts": "15.4.x-scala2.12", "node_type": "Standard_E4pds_v6", "serverless": false}
