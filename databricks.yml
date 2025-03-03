@@ -11,7 +11,7 @@ targets:
   dev:
     # We use 'mode: development' to indicate this is a personal development copy: 
     # - Deployed resources get prefixed with '[dev my_user_name]'
-    # - Any job schedules and triggers are paused by default
+    # - Any job schedules and triggers are paused by default 
     # - The 'development' mode is used for Delta Live Tables pipelines   
     mode: development
     default: true
@@ -22,8 +22,8 @@ targets:
   ## (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/ci-cd.html.) 
   
   # staging:
-    # workspace:
-    #   host: https://adb-3387107885099545.5.azuredatabricks.net/
+  #   workspace:
+  #     host: https://adb-3387107885099545.5.azuredatabricks.net/
 
   # The 'prod' target, used for production deployment.   
   prod:
