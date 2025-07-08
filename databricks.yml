@@ -10,7 +10,7 @@ targets:
   # The 'dev' target, for development purposes. This target is the default.      
   dev:
     # We use 'mode: development' to indicate this is a personal development copy: 
-    # - Deployed resources get prefixed with '[dev my_user_name]'
+    # - Deployed resources get prefixed with '[dev my_user_name]' 
     # - Any job schedules and triggers are paused by default 
     # - The 'development' mode is used for DLT pipelines   
     mode: development
