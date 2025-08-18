@@ -37,5 +37,5 @@ targets:
       root_path: /Users/andres.zuniga@databricks.com/.bundle/${bundle.name}/${bundle.target}
     run_as:
       # This runs as andres.zuniga@databricks.com in production. We could also use a service principal here,
-      # see https://docs.databricks.com/dev-tools/bundles/permissions.html.
+      # see https://docs.databricks.com/dev-tools/bundles/permissions.html. 
       user_name: andres.zuniga@databricks.com
