@@ -7,12 +7,12 @@ include:
   - resources/*/*.yml
 
 targets:
-  # The 'dev' target, for development purposes. This target is the default.      
+  # The 'dev' target, for development purposes. This target is the default.        
   dev:
     # We use 'mode: development' to indicate this is a personal development copy: 
-    # - Deployed resources get prefixed with '[dev my_user_name]' 
-    # - Any job schedules and triggers are paused by default 
-    # - The 'development' mode is used for pipelines   
+    # - Deployed resources get prefixed with '[dev my_user_name]'  
+    # - Any job schedules and triggers are paused by default  
+    # - The 'development' mode is used for pipelines     
     mode: development
     default: true
     workspace:
@@ -25,10 +25,10 @@ targets:
   #   workspace:
   #     host: https://adb-3387107885099545.5.azuredatabricks.net/
 
-  # The 'prod' target, used for production deployment.   
+  # The 'prod' target, used for production deployment.    
   prod:
     # We use 'mode: production' to indicate this is a production deployment.    
-    # Doing so enables strict verification of the settings below.  
+    # Doing so enables strict verification of the settings below.   
     mode: production
     workspace:
       host: https://adb-3387107885099545.5.azuredatabricks.net/
